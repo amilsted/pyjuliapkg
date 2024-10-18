@@ -305,7 +305,7 @@ def resolve(force=False, dry_run=False):
     # find a compatible julia executable
     log(f'Locating Julia{"" if compat is None else " "+str(compat)}')
     exe, ver = find_julia(
-        compat=compat, prefix=STATE["install"], install=True, upgrade=True
+        compat=compat, prefix=STATE["install"], install=True, upgrade=False
     )
     log(f"Using Julia {ver} at {exe}")
     # set up the project
