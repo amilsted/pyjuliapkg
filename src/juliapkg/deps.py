@@ -337,7 +337,6 @@ def resolve(force=False, dry_run=False):
         if add_pkgs:
             script.append(f"Pkg.add([{add_pkgs}])")
         script.append("Pkg.resolve()")
-        script.append("Pkg.precompile()")
         log("Installing packages:")
         for line in script:
             log("julia>", line, cont=True)
